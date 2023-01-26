@@ -51,6 +51,13 @@ body {
 }
 
 /*Main Heading title*/
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Shifts 50% of the element horizontally and vertically*/
+}
+
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
