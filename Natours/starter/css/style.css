@@ -124,7 +124,7 @@ body {
     padding: 15px 40px;
     display: inline-block; /*Help with the spacing so it is no longer inline and overlapping with h1. It is treated like text so all we have to do is center text-aling*/
     transition: all .2s;
-    
+    position: relative; /*Position the pseudo element*/
 }
 
 .btn:hover {
@@ -142,4 +142,27 @@ body {
     color: #777;
     margin: 60px;
     border-radius: 100px;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%; /*Sets it to the height and width of the parent elements which is the button in this case*/
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -1;/*This will set the pseudo class after the button*/
+
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6); /*appear to increase the size*/
+    opacity: 0; /*Helps to fade out the pseudo element*/
 }
