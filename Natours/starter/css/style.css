@@ -116,6 +116,21 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /*Button*/
 .btn:link, .btn:visited {
@@ -165,4 +180,9 @@ body {
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6); /*appear to increase the size*/
     opacity: 0; /*Helps to fade out the pseudo element*/
+}
+
+.btn-animated {
+    animation: moveInBottom 1s ease-out .75s;
+    animation-fill-mode: backwards; /*Automatically apply the styles of the 0% before the animation starts*/
 }
