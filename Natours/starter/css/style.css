@@ -56,6 +56,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); /*Shifts 50% of the element horizontally and vertically*/
+    text-align: center; /*Centers the button*/
 }
 
 .heading-primary {
@@ -113,4 +114,20 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+
+/*Button*/
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block; /*Help with the spacing so it is no longer inline and overlapping with h1. It is treated like text so all we have to do is center text-aling*/
+    
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    margin: 60px;
 }
