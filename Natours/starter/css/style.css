@@ -8,10 +8,12 @@ Dark green: #28b485
 */
 
 /*Universal reset*/
-* {
+*,
+*::after,
+*::before { /*Good to also include the pseudoelements*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit; /*Allows every element to inherit the box sizing property that we set in the body*/
 }
 
 html {
@@ -25,6 +27,8 @@ body {
     line-height: 1.7; /*1.7 times bigger than the predefined font*/
     color: #777777;
     padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 /*Header*/
